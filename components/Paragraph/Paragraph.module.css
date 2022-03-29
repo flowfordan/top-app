@@ -1,0 +1,25 @@
+.paragraph {
+    display: inline-block;  
+    box-sizing: border-box;
+  
+    font-weight: 400;
+    font-style: normal;
+    line-height: 24px;
+    font-size: 14px;
+    margin: 0;
+}
+
+.paragraphS {
+    font-size: 14px;
+    line-height: 24px;
+}
+
+.paragraphM {
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.paragraphL {
+    font-size: 18px;
+    line-height: 29px;
+}

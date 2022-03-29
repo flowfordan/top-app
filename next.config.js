@@ -2,7 +2,7 @@
 const nextConfig = {
   reactStrictMode: true,
 
-  webpack(config, options) {
+  webpack(config) {
     config.module.rules.push({
       use: [
         {
