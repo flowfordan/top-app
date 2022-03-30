@@ -17,7 +17,8 @@ const Layout = ({ children }: LayoutProps): JSX.Element => {
                 {children}
             </div>
         
-        <Footer className={styles.footer}/>
+        <Footer className={styles.footer} />
+
         
         </div>
     );
