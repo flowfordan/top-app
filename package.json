@@ -11,6 +11,7 @@
     "stylelint": "stylelint \"**/*.css\" --fix"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "classnames": "^2.3.1",
     "cross-env": "^7.0.3",
     "date-fns": "^2.28.0",
