@@ -4,13 +4,16 @@ import { Paragraph } from '../components/Paragraph/Paragraph';
 
 export default function Home() {
 
-  const [counter, setCounter] = useState<number>(0)
+
+  const [rating, setRating] = useState<number>(5);
+
+  const [counter, setCounter] = useState<number>(0);
 
  useEffect(() => {
    console.log(counter);
    return function cleanup(){
      console.log('Unmount');
-   }
+   };
   }, []);
 
 
@@ -27,7 +30,7 @@ export default function Home() {
       <Tag size='s'>Zdarova</Tag>
       <Tag size='m' color='red'>Zdarova</Tag>
       <Tag size='m' color='green'>Zdarova</Tag>
-      <Rating rating={4} isEditable/>
+      <Rating rating={rating} isEditable setRating={setRating}/>
     </>
   );
 }
