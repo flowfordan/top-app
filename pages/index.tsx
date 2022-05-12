@@ -27,13 +27,13 @@ function Home({ menu }: HomeProps): JSX.Element {
       <Button appearance='primary' arrow='right' onClick={() => setCounter(a => a + 1)}>Button</Button>
       <Button appearance='ghost' arrow='down'>Button</Button>
       <Paragraph size='s'>
-        Lorem ipsum dolor sit amet, 
+        rererereLorem ipsum dolor sit amet, 
         consectetur adipiscing elit. 
         Nullam lobortis arcu sit amet vehicula fringilla. 
       </Paragraph>
       <Tag size='s'>Zdarova</Tag>
       <Tag size='m' color='red'>Zdarova</Tag>
-      <Tag size='m' color='green'>Zdarova</Tag>
+      <Tag size='m' color='green'>Zdarova ggg</Tag>
       <Rating rating={rating} isEditable setRating={setRating}/>
     </>
   );
