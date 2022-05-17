@@ -29,7 +29,7 @@
 
 @media (max-width: 765px) {
     .sidebar {
-        display: none;
+        display: none !important;
     }
 
     .header {
