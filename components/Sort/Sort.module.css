@@ -13,9 +13,10 @@
 }
 
 .sort{
+    cursor: pointer;
   display: inline-block;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: auto auto;
   gap: 40px;  
 }
 
@@ -25,4 +26,8 @@
     align-items: center;
     gap: 8px;
 
+}
+
+.sort span:not(.active) {
+    grid-template-columns: 1fr;
 }
