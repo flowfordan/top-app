@@ -1,7 +1,7 @@
 import { TopPageComponentProps } from "./TopPageComponent.props";
 import styles from './TopPageComponent.module.css';
 import cn from 'classnames';
-import { Card, Htag, Tag } from "../../components";
+import { Htag, Tag } from "../../components";
 import { HHData } from "../../components/HHData/HHData";
 import { TopLevelCategory } from "../../interfaces/page.interface";
 
