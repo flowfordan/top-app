@@ -32,6 +32,7 @@ function Home({ menu }: HomeProps): JSX.Element {
         Nullam lobortis arcu sit amet vehicula fringilla. 
       </Paragraph>
       <Tag size='s'>Zdarova</Tag>
+      <Tag size='s' color='primary'>Zdarova</Tag>
       <Tag size='m' color='red'>Zdarova</Tag>
       <Tag size='m' color='green'>Zdarova ggg</Tag>
       <Rating rating={rating} isEditable setRating={setRating}/>

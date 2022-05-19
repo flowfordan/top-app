@@ -5,7 +5,7 @@ import cn from 'classnames';
 export const Tag = ({ size='m', children, color = 'ghost', href, className, ...props }: TagProps): JSX.Element => {
 
     return (
-        <div>
+        <span>
             <p className={cn(styles.tag, className, {
                 [styles.s]: size == 's',
                 [styles.m]: size == 'm',
@@ -18,7 +18,7 @@ export const Tag = ({ size='m', children, color = 'ghost', href, className, ...p
             {...props}>
                 {href? <a>{children}</a> : <>{children}</>}
             </p>
-        </div>
+        </span>
     );
     
 };
