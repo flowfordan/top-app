@@ -11,8 +11,6 @@ import { TopPageComponent } from '../../page-components';
 
 function TopPage({ firstCategory, page, products }: TopPageProps): JSX.Element {
 
-    
-
     return (
         <>
             <TopPageComponent 
