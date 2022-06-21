@@ -6,7 +6,7 @@ export const Tag = ({ size='m', children, color = 'ghost', href, className, ...p
 
     return (
         <span>
-            <p className={cn(styles.tag, className, {
+            <span className={cn(styles.tag, className, {
                 [styles.s]: size == 's',
                 [styles.m]: size == 'm',
                 [styles.ghost]: color == 'ghost',
@@ -17,7 +17,7 @@ export const Tag = ({ size='m', children, color = 'ghost', href, className, ...p
             })}
             {...props}>
                 {href? <a>{children}</a> : <>{children}</>}
-            </p>
+            </span>
         </span>
     );
     

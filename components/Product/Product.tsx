@@ -6,7 +6,7 @@ import Image from "next/image";
 import { Rating } from "../Rating/Rating";
 import { Tag } from "../Tag/Tag";
 import { Button } from "../Button/Button";
-import { priceRu } from "../../helpers/helpers";
+import { declOfNum, priceRu } from "../../helpers/helpers";
 import { Divider } from "../Divider/Divider";
 
 
@@ -22,7 +22,7 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
             
             <div className={styles.price}>
                 {priceRu(product.price)}
-                {product.oldPrice && <Tag className={styles.oldPrice} color='green'>
+                {product.oldPrice && <Tag className={styles.oldPrice} color='green' size="s">
                     {priceRu(product.price - product.oldPrice)}
                 </Tag>}
             </div>
@@ -41,7 +41,9 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
             
             <div className={styles.creditTitle}>кредит</div>
             
-            <div className={styles.rateTitle}>{product.reviewCount} отзывов</div>
+            <div className={styles.rateTitle}>
+                {product.reviewCount} {declOfNum(product.reviewCount, ['отзыв', 'отзыва', 'отзывов'])}
+            </div>
             
             
             <Divider className={styles.hr}/>
