@@ -50,7 +50,15 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
             
             <div className={styles.description}>{product.description}</div>
             
-            <div className={styles.features}>features</div>
+            <div className={styles.features}>
+                {product.characteristics.map(c => (
+                    <div className={styles.characteristics} key={c.name}>
+                        <span className={styles.characteristicsName}>{c.name}</span>
+                        <span className={styles.characteristicsDots}></span>
+                        <span className={styles.characteristicsValue}>{c.value}</span>
+                    </div>
+                ))}
+            </div>
             
             <div className={styles.advBlock}>
                 {product.advantages && <div className={styles.advantages}>
