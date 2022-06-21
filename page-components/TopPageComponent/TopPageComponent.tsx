@@ -25,7 +25,6 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
                 <Htag tag="h1">{page.title}</Htag>
                 {products && <Tag color="grey" size="m">{products.length}</Tag>}
                 <Sort sort={sort} setSort={setSort}/>
-                {products && products.length}
             </div>
 
             <div>
