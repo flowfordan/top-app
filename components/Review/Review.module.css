@@ -49,3 +49,15 @@
         "descr descr";
     } 
 }
+
+@media (max-width: 480px){
+    .review{
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+        "user"
+        "header"
+        "date"
+        "rating"
+        "descr";
+    } 
+}
