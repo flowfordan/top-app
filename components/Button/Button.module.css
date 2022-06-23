@@ -11,6 +11,10 @@
   font-size: 14px;
 }
 
+.button:disabled {
+    color: var(--grey-main);
+}
+
 .primary {
     color: var(--white);
     background-color: var(--primary);
@@ -27,7 +31,7 @@
     border: 1px solid var(--grey-light);
 }
 
-.ghost:hover {
+.ghost:hover:enabled {
     color: var(--white);
     background-color: var(--primary);
 }
@@ -43,6 +47,11 @@
 }
 
 .primary svg,
-.ghost:hover svg {
+.ghost:hover:enabled svg {
     fill: var(--white)
+}
+
+.primary svg,
+.ghost:disabled svg {
+    fill: var(--grey-main)
 }
