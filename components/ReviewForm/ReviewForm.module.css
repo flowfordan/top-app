@@ -1,0 +1,13 @@
+.reviewForm{
+    display: grid;
+    grid-template-columns: auto 1fr auto auto;
+    grid-template-areas: 
+    "user header date rating"
+    "descr descr descr descr";
+
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    line-height: 24px;
+}
+

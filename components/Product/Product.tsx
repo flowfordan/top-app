@@ -10,11 +10,13 @@ import { declOfNum, priceRu } from "../../helpers/helpers";
 import { Divider } from "../Divider/Divider";
 import { useState } from "react";
 import { Review } from "../Review/Review";
+import { ReviewForm } from "../ReviewForm/ReviewForm";
 
 
 export const Product = ({ product, className, ...props }: ProductProps): JSX.Element => {
     
-    const [isReviewOpened, setIsReviewOpened] = useState<boolean>(false)
+    const [isReviewOpened, setIsReviewOpened] = useState(false);
+    const [isFormOpened, setFormOpened] = useState(false);
 
 
     return (
@@ -84,15 +86,30 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
             <Divider className={styles.hr2}/>
             
             <div className={styles.actions}>
+
                 <Button appearance="primary">
                     Узнать подробнее
                 </Button>
+
                 <Button appearance="ghost" 
                 arrow={isReviewOpened? 'down':'right'} 
                 className={styles.reviewButton} 
-                onClick={() => setIsReviewOpened(!isReviewOpened)}
+                onClick={() => {
+                    setIsReviewOpened(!isReviewOpened);
+                    setFormOpened(false);
+                }}
                 disabled={product.reviews.length === 0}>
-                    Читать отзывы
+                    {product.reviews.length === 0? 'Отзывов нет...пока' : 'Читать отзывы'}
+                </Button>
+
+                <Button appearance="ghost" 
+                arrow={isFormOpened? 'down':'right'} 
+                className={styles.reviewButton} 
+                onClick={() => {
+                    setFormOpened(!isFormOpened);
+                    setIsReviewOpened(false);
+                }}>
+                    Написать отзыв
                 </Button>
             </div>
 
@@ -104,8 +121,18 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
             [styles.closed]: !isReviewOpened,
         })}>
             {product.reviews.map(review => (
+                <>
                 <Review review={review} key={review._id}/>
+                <Divider />
+                </>
             ))}
+        </Card>
+
+        <Card color="blue" className={cn(styles.reviews, {
+            [styles.opened]: isFormOpened,
+            [styles.closed]: !isFormOpened,
+        })}>
+            <ReviewForm productId={product._id} />
         </Card>
 
         </>
