@@ -112,8 +112,6 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
                     Написать отзыв
                 </Button>
             </div>
-
-            
         </Card>
 
         <Card color="blue" className={cn(styles.reviews, {
@@ -121,10 +119,10 @@ export const Product = ({ product, className, ...props }: ProductProps): JSX.Ele
             [styles.closed]: !isReviewOpened,
         })}>
             {product.reviews.map(review => (
-                <>
-                <Review review={review} key={review._id}/>
-                <Divider />
-                </>
+                <div key={review._id}>
+                    <Review review={review}/>
+                    <Divider />
+                </div>
             ))}
         </Card>
 
