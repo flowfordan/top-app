@@ -35,7 +35,7 @@
     gap: 10px;
 }
 
-.success{
+.success, .error{
     background-color: var(--green-light);
     padding: 20px;
     position: relative;
@@ -43,7 +43,11 @@
     margin-top: 20px;
 }
 
-.successTitle{
+.error{
+    background-color: var(--red-light);
+}
+
+.successTitle, .errorTitle{
     font-weight: bold;
 }
 
@@ -52,6 +56,10 @@
     top: 20px;
     right: 20px;
     cursor: pointer;
+}
+
+.error .close path{
+    stroke: var(--red);
 }
 
 @media (max-width: 1320px){
