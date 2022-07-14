@@ -46,6 +46,10 @@
     grid-area: rateTitle;
 }
 
+.rateTitle a {
+  color: var(--primary);  
+}
+
 .tags{
     grid-area: tags;
 }
