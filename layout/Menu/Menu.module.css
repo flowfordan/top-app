@@ -44,18 +44,19 @@
     border-left: 1px solid #DFDFDF;
 }
 
-.secondBlockOpened:last-child{
+/* .secondBlockOpened:last-child{
     margin-bottom: 20px;
-}
+} */
 
 .secondLevelBlock{
-    display: none;
+    /* display: none; */
+    overflow: hidden;
 }
 
-.secondLevelBlockOpened{
+/* .secondLevelBlockOpened{
     display: block;
     padding-left: 10px;
-}
+} */
 
 .thirdLevel, .thirdLevelActive{
     margin-bottom: 10px;
