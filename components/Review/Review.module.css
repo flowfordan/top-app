@@ -1,63 +1,64 @@
-.review{
-    display: grid;
-    grid-template-columns: auto 1fr auto auto;
-    grid-template-areas: 
-    "user header date rating"
-    "descr descr descr descr";
+.review {
+	display: grid;
+	grid-template-columns: auto 1fr auto auto;
+	grid-template-areas:
+		'user header date rating'
+		'descr descr descr descr';
 
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    line-height: 24px;
+	align-items: center;
+	gap: 10px;
+
+	font-size: 14px;
+	line-height: 24px;
 }
 
-.user{
-    grid-area: user;
+.user {
+	grid-area: user;
 }
 
-.name{
-    font-weight: bold;
+.name {
+	font-weight: bold;
 }
 
-.header{
-    grid-area: header;
+.header {
+	grid-area: header;
 }
 
-.title{
-    grid-area: title;
+.title {
+	grid-area: title;
 }
 
-.rating{
-    grid-area: rating;
+.rating {
+	grid-area: rating;
 }
 
-.description{
-    grid-area: descr;
+.description {
+	grid-area: descr;
 }
 
 .date {
-    grid-area: date;
+	grid-area: date;
 }
 
-@media (max-width: 640px){
-    .review{
-        grid-template-columns: auto 1fr;
-        grid-template-areas: 
-        "user ."
-        "header ."
-        "date rating"
-        "descr descr";
-    } 
+@media (max-width: 640px) {
+	.review {
+		grid-template-columns: auto 1fr;
+		grid-template-areas:
+			'user .'
+			'header .'
+			'date rating'
+			'descr descr';
+	}
 }
 
-@media (max-width: 480px){
-    .review{
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "user"
-        "header"
-        "date"
-        "rating"
-        "descr";
-    } 
+@media (max-width: 480px) {
+	.review {
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'user'
+			'header'
+			'date'
+			'rating'
+			'descr';
+	}
 }

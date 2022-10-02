@@ -1,88 +1,95 @@
-.reviewForm{
-    display: grid;
-    grid-template-columns: auto 1fr auto;
-    grid-template-areas: 
-    "header . rating"
-    "textarea textarea textarea"
-    "submit submit submit";
+.reviewForm {
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	grid-template-areas:
+		'header . rating'
+		'textarea textarea textarea'
+		'submit submit submit';
 
-    align-items: center;
-    gap: 20px 30px;
-    font-size: 14px;
-    line-height: 24px;
+	align-items: center;
+	gap: 20px 30px;
+
+	font-size: 14px;
+	line-height: 24px;
 }
 
-.header{
-    grid-area: header;
-    display: flex;
-    gap: 15px;
+.header {
+	grid-area: header;
+
+	display: flex;
+	gap: 15px;
 }
 
-.rating{
-    grid-area: rating;
-    display: flex;
-    gap: 10px;
-    
+.rating {
+	grid-area: rating;
+
+	display: flex;
+	gap: 10px;
 }
 
-.textarea{
-    grid-area: textarea;
+.textarea {
+	grid-area: textarea;
 }
 
-.submit{
-    grid-area: submit;
-    display: flex;
-    gap: 10px;
+.submit {
+	grid-area: submit;
+
+	display: flex;
+	gap: 10px;
 }
 
-.success, .error{
-    background-color: var(--green-light);
-    padding: 20px;
-    position: relative;
-    border-radius: 5px;
-    margin-top: 20px;
+.success,
+.error {
+	position: relative;
+
+	margin-top: 20px;
+	padding: 20px;
+
+	border-radius: 5px;
+	background-color: var(--green-light);
 }
 
-.error{
-    background-color: var(--red-light);
+.error {
+	background-color: var(--red-light);
 }
 
-.successTitle, .errorTitle{
-    font-weight: bold;
+.successTitle,
+.errorTitle {
+	font-weight: bold;
 }
 
-.close{
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    cursor: pointer;
+.close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+
+	cursor: pointer;
 }
 
-.error .close path{
-    stroke: var(--red);
+.error .close path {
+	stroke: var(--red);
 }
 
-@media (max-width: 1320px){
-    .reviewForm{
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-areas: 
-        "header"
-        "rating"
-        "textarea"
-        "submit";
-    }
+@media (max-width: 1320px) {
+	.reviewForm {
+		display: grid;
+		grid-template-columns: 1fr;
+		grid-template-areas:
+			'header'
+			'rating'
+			'textarea'
+			'submit';
+	}
 }
 
 @media (max-width: 640px) {
+	.header {
+		flex-direction: column;
+		gap: 15px;
+	}
 
-    .header{
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .submit{
-        flex-direction: column;
-        gap: 10px;
-    }
+	.submit {
+		flex-direction: column;
+		gap: 10px;
+	}
 }

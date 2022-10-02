@@ -2,6 +2,7 @@ html,
 body {
 	margin: 0;
 	padding: 0;
+
 	color: var(--black);
 	background: #F5F6F8;
 
@@ -20,15 +21,15 @@ a {
 
 :root {
 	--black: #3B434E;
-	--grey-light:#EBEBEB;
+	--grey-light: #EBEBEB;
 	--grey-dark: #787D85;
-	--grey-main: #a0a7b3;
+	--grey-main: #A0A7B3;
 	--grey: #A4A4A4;
 	--white: white;
 	--primary: #1790FF;
-	--primary-hover: #167cdb;
+	--primary-hover: #167CDB;
 	--red: #FC836D;
-	--red-light: #ffd0c7;
+	--red-light: #FFD0C7;
 	--green: #1DC37E;
 	--green-light: #C8F8E4;
 	--font-family: 'Noto Sans KR', sans-serif;
