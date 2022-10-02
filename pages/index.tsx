@@ -8,19 +8,8 @@ import { API } from '../helpers/api';
 
 
 function Home({ menu }: HomeProps): JSX.Element {
-
-
   const [rating, setRating] = useState<number>(5);
-
   const [counter, setCounter] = useState<number>(0);
-
- useEffect(() => {
-   console.log(counter);
-   return function cleanup(){
-     console.log('Unmount');
-   };
-  }, []);
-
 
   return (
     <>
