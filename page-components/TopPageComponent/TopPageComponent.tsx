@@ -19,7 +19,7 @@ export const TopPageComponent = ({ page, products, firstCategory }: TopPageCompo
     };
 
     useEffect(() => {
-      dispatchSort({type: 'reset', initialState: products})  
+      dispatchSort({type: 'reset', initialState: products});  
     }, [products]);
 
     return (
