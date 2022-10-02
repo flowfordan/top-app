@@ -50,12 +50,10 @@
 	transform: rotate(90deg);
 }
 
-.primary svg,
-.ghost:hover:enabled svg {
-	fill: var(--white);
-}
-
-.primary svg,
 .ghost:disabled svg {
 	fill: var(--grey-main);
+}
+
+.ghost:hover:enabled svg {
+	fill: var(--white);
 }
