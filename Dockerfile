@@ -1,8 +1,8 @@
-FROM node:14-alpine
+FROM node:14-alpine as builder
 WORKDIR /app
-ADD package.json package.json
+COPY package.json ./
 RUN npm install
-ADD . .
+COPY . ./
 ENV NODE_ENV production
 RUN npm run build
 RUN npm prune --production
